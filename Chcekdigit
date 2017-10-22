@@ -1,0 +1,50 @@
+/*
+ to identify digit as checkdigit
+  1).Input: 27
+     Output:3*(2+7)
+         27
+  Checkdigits are euqal
+  2). Input: 34
+      Output:3*(3+4)=21
+    Checkdigits are not equal
+*/
+import java.io.*;
+class checkdigit
+{
+  int s,r,n,m;
+void input()throws Exception
+{
+ BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+ System.out.println("Enter n");
+ n=Integer.parseInt(br.readLine());
+ }
+void process()
+{
+ m=n;
+ s=0;
+ while(n!=0)
+ {
+   r=n%10;
+   s=s+r;
+   n=n/10;
+ }
+ n=3*s;
+}
+void output()
+{
+ if(n==m)
+    System.out.println("Checkdigits are equal");
+  else
+   System.out.println("Checkdigits are not equal");
+}
+}
+class check
+{
+ public static void main(String arg[])throws Exception
+ {
+ checkdigit c=new checkdigit();
+ c.input();
+ c.process();
+ c.output();
+}
+}
