@@ -1,0 +1,24 @@
+/*
+    To print letters from digits
+    Input:
+      Enter string
+      HelloWorld!
+      Enter start: 4
+      Enter end:   7
+    Output:
+         loW
+*/
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    String S = in.next();
+    System.out.println()
+    int start = in.nextInt();
+    int end = in.nextInt();
+    System.out.println(S.substring(start,end));
+}
+}
